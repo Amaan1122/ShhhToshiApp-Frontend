@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
     }
 
     const options: TonConnectUiCreateOptions = {
-      manifestUrl: 'https://localhost:4200/tonconnect-manifest.json',
+      manifestUrl: 'https://shhh-toshi-app-frontend.vercel.app/tonconnect-manifest.json',
       buttonRootId: 'ton-connect-button',
     };
 
