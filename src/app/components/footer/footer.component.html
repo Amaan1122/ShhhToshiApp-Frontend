@@ -1,0 +1,24 @@
+<div class="container w-full">
+  <div class="footer-section flex justify-evenly text-center py-2">
+    <div class="navigator navigate-home" (click)="navigateToHome()">
+      <lucide-icon [name]="House"></lucide-icon>
+      <p class="m-0">Home</p>
+    </div>
+    <div class="navigator navigate-staking" (click)="navigateToStake()">
+      <lucide-icon [name]="Coins"></lucide-icon>
+      <p class="m-0">Stake</p>
+    </div>
+    <div class="navigator navigate-task" (click)="navigateToTask()">
+      <lucide-icon [name]="Gift"></lucide-icon>
+      <p class="m-0">Tasks</p>
+    </div>
+    <div class="navigator navigate-referral" (click)="navigateToRefferal()">
+      <lucide-icon [name]="Users"></lucide-icon>
+      <p class="m-0">Referrals</p>
+    </div>
+    <div class="navigator navigate-wallet" (click)="navigateToWallet()">
+      <lucide-icon [name]="Wallet"></lucide-icon>
+      <p class="m-0">Wallet</p>
+    </div>
+  </div>
+</div>

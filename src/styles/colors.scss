@@ -1,0 +1,102 @@
+// colors.scss
+
+// Theme Colors (converted from oklch to rgba)
+$background: rgba(36, 36, 36, 1);
+$foreground: rgba(251, 251, 251, 1);
+$card: rgba(36, 36, 36, 1);
+$card-foreground: rgba(251, 251, 251, 1);
+$popover: rgba(36, 36, 36, 1);
+$popover-foreground: rgba(251, 251, 251, 1);
+$primary: rgba(251, 251, 251, 1);
+$primary-foreground: rgba(52, 52, 52, 1);
+$secondary: rgba(68, 68, 68, 1);
+$secondary-foreground: rgba(251, 251, 251, 1);
+$muted: rgba(68, 68, 68, 1);
+$muted-foreground: rgba(180, 180, 180, 1);
+$accent: rgba(68, 68, 68, 1);
+$accent-foreground: rgba(251, 251, 251, 1);
+$destructive: rgba(201, 86, 0, 1);
+$destructive-foreground: rgba(255, 148, 69, 1);
+$border: rgba(68, 68, 68, 1);
+$input: rgba(68, 68, 68, 1);
+$ring: rgba(111, 111, 111, 1);
+
+// Font Weights
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+
+// Chart Colors
+$chart-1: rgba(101, 0, 248, 1);
+$chart-2: rgba(99, 255, 209, 1);
+$chart-3: rgba(235, 255, 137, 1);
+$chart-4: rgba(255, 64, 242, 1);
+$chart-5: rgba(255, 123, 73, 1);
+
+// Sidebar Colors
+$sidebar: rgba(52, 52, 52, 1);
+$sidebar-foreground: rgba(251, 251, 251, 1);
+$sidebar-primary: rgba(101, 0, 248, 1);
+$sidebar-primary-foreground: rgba(251, 251, 251, 1);
+$sidebar-accent: rgba(68, 68, 68, 1);
+$sidebar-accent-foreground: rgba(251, 251, 251, 1);
+$sidebar-border: rgba(68, 68, 68, 1);
+$sidebar-ring: rgba(111, 111, 111, 1);
+
+// Typography & Radius
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+$radius: 0.625rem;
+
+// Text Colors
+
+.text-green {
+  color: green;
+}
+
+.text-warning {
+  color: yellow;
+}
+
+.text-danger {
+  color: red;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.text-muted {
+  color: $ring;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+// Background Colors
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-blue {
+  background-color: rgba(blue, 0.1) !important;
+}
+
+.bg-green {
+  background-color: rgba(darkgreen, 0.1) !important;
+}
+
+// Border Colors
+
+.border-blue {
+  border-color: blue !important;
+}
+
+.border-green {
+  border-color: darkgreen !important;
+}
+
+.border-muted {
+  border-color: $border !important;
+}

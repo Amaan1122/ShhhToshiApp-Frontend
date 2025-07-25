@@ -1,0 +1,27 @@
+<div class="container py-2 w-full">
+  <div class="header-section flex items-center justify-between">
+    <div class="header-left flex items-center">
+      <div class="app-icon">
+        <img src="../../../assets/favicon/shhhtoshi.png" alt="" />
+      </div>
+      <div class="app-label ml-4">
+        <p class="text-green font-semibold">TON Staking</p>
+        <p>{{ walletAddress }}</p>
+      </div>
+    </div>
+    <div class="header-right flex items-center">
+      <div class="app-label">
+        <p><strong>Points</strong></p>
+        <p class="text-orange">12,300</p>
+      </div>
+      <div class="disconnet-button ml-4">
+        <button
+          class="button-dark text-green font-semibold"
+          (click)="disconnectWallet()"
+        >
+          Disconnect
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
