@@ -1,1 +1,167 @@
-<button mat-button class="mat-button" (click)="disconnectWallet()">Disconnect</button>
+<div class="container">
+  <!-- Info Cards -->
+  <div class="info-cards flex justify-around">
+    <mat-card
+      class="bg-transparent w-full m-4 border-blue bg-blue"
+      appearance="outlined"
+    >
+      <mat-card-content>
+        <div class="total-staked-content">
+          <div class="title flex">
+            <lucide-icon size="21" color="blue" [name]="Coins"></lucide-icon>
+            <p class="font-bold mb-0 ml-2">Total Staked</p>
+          </div>
+          <p class="font-medium my-2">250.00</p>
+          <p class="font-light mb-0">≈ $575.95</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card
+      class="bg-transparent w-full m-4 border-green bg-green"
+      appearance="outlined"
+    >
+      <mat-card-content>
+        <div class="total-rewards-content">
+          <div class="title flex">
+            <lucide-icon size="21" color="green" [name]="TrendingUp"></lucide-icon>
+            <p class="font-bold mb-0 ml-2">Total Rewards</p>
+          </div>
+          <p class="font-medium my-2">45.8923</p>
+          <p class="font-light mb-0">≈ $105.55</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Portfolio Overview -->
+
+  <div class="portfolio-overview m-4">
+    <mat-card
+      class="bg-transparent border-muted w-full bg-transparent"
+      appearance="outlined"
+    >
+      <mat-card-content>
+        <div class="card-heading flex ">
+          <lucide-icon [size]="20" [name]="BriefcaseBusiness"></lucide-icon>
+          <p class="font-bold ml-4">Portfolio Overview</p>
+        </div>
+
+        <!-- Portfolio Info Card -->
+        <div class="info-cards flex justify-around mt-4">
+          <mat-card
+            class="bg-transparent border-0 w-full"
+            appearance="outlined"
+          >
+            <mat-card-content class="p-0">
+              <div class="total-staked-content">
+                <p class="font-light mb-0 text-muted">Portfolio Value</p>
+                <p class="font-medium my-2 text-lg">295.8923 TON</p>
+                <p class="font-medium mb-0 text-xs text-muted">≈ $680.55</p>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card
+            class="bg-transparent border-0 w-full"
+            appearance="outlined"
+          >
+            <mat-card-content class="p-0">
+              <div class="total-rewards-content">
+                <p class="font-light mb-0 text-muted">Total Profit</p>
+                <p class="font-medium my-2 text-green text-lg">+18.36%</p>
+                <p class="font-medium mb-0 text-xs text-muted">
+                  45 days staking
+                </p>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Staking Info Card -->
+  <div class="info-cards flex justify-around">
+    <mat-card
+      class="bg-transparent border-muted  w-full text-center m-4 h-fit"
+      appearance="outlined"
+    >
+      <mat-card-content class="p-2">
+        <div class="total-staked-content">
+          <lucide-icon [name]="CalendarDays"></lucide-icon>
+          <p class="font-medium my-1 text-lg">45</p>
+          <p class="font-medium mb-0 text-xs text-muted">Days</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card
+      class="bg-transparent border-muted w-full text-center m-4 h-fit"
+      appearance="outlined"
+    >
+      <mat-card-content class="p-2">
+        <div class="total-rewards-content">
+          <lucide-icon color="green" [name]="ChartNoAxesCombined"></lucide-icon>
+          <p class="font-medium my-1 text-lg">12.5%</p>
+          <p class="font-medium mb-0 text-xs text-muted">APY</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card
+      class="bg-transparent border-muted w-full text-center m-4 h-fit"
+      appearance="outlined"
+    >
+      <mat-card-content class="p-2">
+        <div class="total-rewards-content">
+          <lucide-icon color="blue" [name]="BadgeDollarSign"></lucide-icon>
+          <p class="font-medium my-1 text-lg">3</p>
+          <p class="font-medium mb-0 text-xs text-muted">Transactions</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Recent Activity Card -->
+
+  <div class="recent-activity-card m-4">
+    <mat-card
+      class="bg-transparent border-muted w-full text-center h-fit"
+      appearance="outlined"
+    >
+      <mat-card-content>
+        <div class="flex justify-between items-center mb-4">
+          <p class="font-bold mb-0">Recent Activity</p>
+          <a class="text-gray-400">
+            <lucide-icon [name]="ExternalLink"></lucide-icon>
+          </a>
+        </div>
+
+        <div
+          *ngFor="let activity of activities"
+          class="py-4 border-t border-gray-800 first:border-t-0"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex">
+              <div class="mt-1 text-lg">
+                <lucide-icon [ngClass]="activity.color" [name]="activity.icon"></lucide-icon>
+              </div>
+              <div class="text-left ml-4">
+                <div class="font-semibold">{{ activity.title }}</div>
+                <div class="text-xs text-muted">{{ activity.date }}</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-sm font-medium" [ngClass]="activity.color">
+                {{ activity.amount }} {{ activity.currency }}
+              </div>
+              <div
+                class="rounded-full text-xs capitalize text-end"
+                [ngClass]="activity.color"
+              >
+                {{ activity.status }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
