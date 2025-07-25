@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
         const walletAddress = wallet.account.address;
         localStorage.setItem('walletAddress', walletAddress);
         console.log('✅ Wallet connected:', walletAddress);
-        this.route.navigate(['wallet']);
+        this.route.navigate(['d-app']);
 
         // Send to backend
         fetch('https://localhost:5000/api/user/save-user', {
